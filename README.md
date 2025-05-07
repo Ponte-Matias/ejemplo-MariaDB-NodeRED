@@ -13,6 +13,7 @@ Ingresar a Node-RED: [http://localhost:1880](http://localhost:1880)
 Ingresar a adminer:  [http://localhost:8080](http://localhost:8080)
 
 En la pagina de Node-RED conectar los bloques y asegurarse de poner las IP's correctas de los contenedores
+Para conectar la base de datos MariaDB utilizar el bloque mysql que se obtiene al instalar dentro de Manage palette: "node-red-node-mysql"
 ```bash
 docker inspect nombre_docker | grep IPAddress
 ```
