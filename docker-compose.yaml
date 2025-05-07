@@ -1,0 +1,23 @@
+# Use root/example as user/password credentials
+
+services:
+
+  db:
+    image: mariadb
+    restart: no
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+    networks:
+      - iot
+
+  adminer:
+    image: adminer
+    restart: no
+    ports:
+      - 8080:8080
+    networks:
+      - iot
+
+networks:
+  iot:
+    external: true
