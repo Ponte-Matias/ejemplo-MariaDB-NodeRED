@@ -14,7 +14,7 @@ Ingresar a adminer:  [http://localhost:8080](http://localhost:8080)
 
 En la pagina de Node-RED conectar los bloques y asegurarse de poner las IP's correctas de los contenedores
 ```bash
-docker inspect mybroker | grep IPAddress
+docker inspect nombre_docker | grep IPAddress
 ```
 Si se quiere ingresar al docker de mariadb:
 ```bash
