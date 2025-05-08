@@ -33,12 +33,18 @@ docker inspect nombre_docker | grep IPAddress
 ```
 
 Luego en el bloque function poner:
+```sql
 msg.topic = "SELECT * FROM sensors";
 return msg;
-Luego al apretar el boton de inject, veremos en el debug los datos de la tabla
+```
+Una vez configurado todo, presionar el botón de Deploy arriba a la derecha y abrir la sección de debug (también arriba a la derecha).
+Luego al apretar el boton de inject, veremos en el debug los datos de la tabla.
 
 Si se quiere ingresar a la terminal del Docker de MariaDB para utilizar los comandos manualmente, hacer:
 ```bash
 docker exec -it nombre-del-contenedor bash
 mariadb -u root -p  # para ingresar con usuario/password, root/example
 ```
+
+### Conclusión
+Con esta simple implementación en Node-RED se pueden lograr grandes proyectos automatizando la recolección de datos o agregar datos a tablas de distintos tipos. Además si se combina con protocolos como MQTT podremos implementar más herramientas para trabajar con IOT.
