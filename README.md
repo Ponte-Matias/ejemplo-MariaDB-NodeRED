@@ -27,17 +27,18 @@ Editar el bloque mysql (haciendo doble click) con la IP del container, puerto 33
 
 ![image](https://github.com/user-attachments/assets/e1b7bdd6-5923-4be9-8289-a2f8952c026e)
 
-Luego en el bloque function poner:
-msg.topic = "SELECT * FROM <tabla_a_visualizar>";
-return msg;
-Luego al apretar el boton de inject, veremos en el debug los datos de la tabla
+Para averiguar la IP del contenedor se puede hacer:
 ```bash
 docker inspect nombre_docker | grep IPAddress
 ```
-Si se quiere ingresar al docker de mariadb:
+
+Luego en el bloque function poner:
+msg.topic = "SELECT * FROM sensors";
+return msg;
+Luego al apretar el boton de inject, veremos en el debug los datos de la tabla
+
+Si se quiere ingresar a la terminal del Docker de MariaDB para utilizar los comandos manualmente, hacer:
 ```bash
 docker exec -it nombre-del-contenedor bash
 mariadb -u root -p  # para ingresar con usuario/password, root/example
 ```
-
-
