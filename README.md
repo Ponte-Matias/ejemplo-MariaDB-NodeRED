@@ -11,6 +11,10 @@ docker compose up
 Ingresar a Node-RED: [http://localhost:1880](http://localhost:1880)
 Ingresar a adminer:  [http://localhost:8080](http://localhost:8080)
 
+Si se desea ingresar a la base de datos a través de Adminer, en el campo server deben poner el nombre del contenedor, en este caso: mydb
+
+![image](https://github.com/user-attachments/assets/d3f17c55-5ad8-4d62-ba4d-0017bc6af694)
+
 Notar que ya se brinda una base de datos con una tabla pequeña de ejemplo.
 Database: iotdb
 Tabla: sensors
