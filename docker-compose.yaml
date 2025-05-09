@@ -2,8 +2,18 @@
 
 services:
 
-  db:
+  mynodered:
+    image: nodered/node-red
+    container_name: mynodered
+    restart: no
+    ports:
+      - 1880:1880
+    networks:
+      - iot
+
+  mydb:
     image: mariadb
+    container_name: mydb
     restart: no
     environment:
       MARIADB_ROOT_PASSWORD: example
@@ -12,8 +22,9 @@ services:
     networks:
       - iot
 
-  adminer:
+  myadminer:
     image: adminer
+    container_name: myadminer
     restart: no
     ports:
       - 8080:8080
