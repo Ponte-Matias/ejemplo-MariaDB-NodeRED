@@ -1,9 +1,8 @@
 # Ejemplo de MariaDB implementado en NodeRED
 ### Cómo usarlo
-Primero levantar el docker de Node-RED
+Primero crear la network donde se van a comunicar los containers
 ```bash
 docker network create iot
-docker run -itd -p 1880:1880 --network iot --name mynodered nodered/node-red
 ```
 Correr docker-compose.yaml (notar que no es necesario utilizar adminer, es simplemente para poder visualizar en un entorno visual la base de datos, si se desea, borrar/comentar las lineas si no se quiere utilizar adminer)
 ```bash
